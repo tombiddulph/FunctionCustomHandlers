@@ -1,0 +1,20 @@
+﻿{
+  "bindings": [
+    {
+      "type":"cosmosDBTrigger",
+      "direction": "in",
+      "name": "items",
+      "connectionStringSetting": "cosmosConnection",
+      "databaseName": "shopping",
+      "collectionName": "items",
+      "createLeaseCollectionIfNotExists": true
+    },
+    {
+      "name": "output",
+      "type": "queue",
+      "direction": "out",
+      "queueName": "queueoutput",
+      "connection": "AzureWebJobsStorage"
+    }
+  ]
+}
